@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rapidito Delivery</title>
+    <link rel="shortcut icon" href="img/icono_express_m.svg" type="image/x-icon">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@100;200&family=Anton&family=League+Gothic&family=Permanent+Marker&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@100;200&family=Anton&family=Inter:wght@300&family=League+Gothic&family=Oswald:wght@300&family=Permanent+Marker&family=Roboto+Mono:wght@100&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/45ef768f1f.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+
+</head>
+
+<body>
+
+    <header>
+        <div class="header" id="header">
+        <div class="menu" id="menu">
+            <i id="menuPrincipal" class="sidebar fa-solid fa-bars"></i>
+            <a id="back" onclick="regresar()"><i class='bx bxs-chevrons-left'></i></a>
+        </div>
+        <nav class="menu-navegacion" id="menu-navegacion">
+            <a onclick="seleccionarOpcion(7,3)">Perfil</a>
+            <a onclick="seleccionarOpcion(3,0)">Órdenes Disponibles</a>
+            <a onclick="seleccionarOpcion(4,0)">Órdenes Pendientes</a>
+            <a onclick="seleccionarOpcion(5,0)">Órdenes Entregadas</a>
+            <a onclick="seleccionarOpcion(1,0)">Cerrar sesión</a>
+        </nav>
+        <div class="logo" id="logo-header">
+            <img id="logo" src="img/rapiditosvg.svg" alt="logo">
+        </div>
+       </div>
+        <hr>
+    </header>
+
+    <section class="contenido-1" id="login">
+        <div class="section-tittle">
+            <h3>Deliverys</Hh3>
+        </div>
+        <section class="img-tittle d-flex justify-content-center">
+            
+        </section>
+        <div class="section-tittle" id="parrafo" >
+            <p>Posees motocicleta?, unete a nuestro equipo. </p>
+            
+        </div>
+
+        <div id="log-in">
+            <h3>
+                <p>Inicio de Sesión</p>
+            </h3>
+            <form class="row g-2" id="formLogin" action="/login" method="post">
+                <div class="col-md-12">
+                    <label class="form-label">Usuario:</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+                        <input type="text" class="form-control" name="usuario" id="usuario"
+                            placeholder="Ingrese su nombre de usuario">
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <label class="form-label">Contraseña:</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fa-solid fa-lock"></i></span>
+                        <input type="password" name="password" class="form-control" id="password"
+                            placeholder="Ingrese su contraseña">
+                        <br>
+                    </div>
+                </div>
+            </form>
+
+            <div id="buttons">
+                <button type="button" class="btn btn-primary btn-lg" id="iniciarSesion"
+                    onclick="seleccionarOpcion(3)">Inicia
+                    sesión</button><br>
+                <button type="submit" class="btn btn-primary btn-lg" id="registrarse"
+                    onclick="seleccionarOpcion(2)">Regístrate</button>
+                <br>
+                <a href="#">Olvidé mi contraseña</a>
+            </div>
+        </div>
+
+        
+
+    </section>
+
+    <section class="contenido-2" id="form-registro">
+        <div class="sign-up">
+            <h3>Regístrate</h3>
+            <form id="formRegister" action="/register" method="post">
+                <label class="form-label">Nombre de Usuario:</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+                    <input type="text" class="form-control" id="newUsuario" name="newUsuario"
+                        placeholder="Ingrese su nombre o correo">
+                </div>
+                <br>
+
+                <label class="form-label ">Contraseña:</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fa-solid fa-lock"></i></span>
+                    <input type="password" class="form-control" id="newPassword" name="password"
+                        placeholder="Ingrese su contraseña">
+                    <br>
+                </div>
+                <br>
+
+                <label class="form-label">Confirmar Contraseña:</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fa-solid fa-lock"></i></span>
+                    <input type="password" class="form-control" id="confirmarPass"
+                        placeholder="Ingrese nuevamente su contraseña" onkeyup="validarPassword(this)">
+                </div>
+                <br>
+
+                <label class="form-label">Número teléfonico:</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fa-solid fa-mobile-screen"></i></span>
+                    <input type="text" class="form-control" id="telefono" name="telefono"
+                        placeholder="Ingrese su numero telefónico">
+                </div>
+                <br>
+
+                <label class="form-label">Correo:</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
+                    <input type="email" class="form-control" id="correo" name="correo" placeholder="name@example.com">
+                </div>
+            </form>
+            <br>
+            <div id="buttons">
+                <button type="button" class="btn btn-primary btn-lg"
+                    onclick="registrarMotorista()">Registrarse</button><br>
+            </div>
+        </div>
+    </section>
+
+    <section class="contenido-3" id="seccion-Odisponibles">
+        <div class="section-tittle">
+            
+            <span class="text-center">
+                <h3> Órdenes Disponibles</Hh3>
+            </span>
+        </div>
+        <div class="parrafo" id="parrafo">
+            <p>Se muestran las órdenes disponibles. ¡Toma una orden! </p>
+        </div>
+
+        <div class="contenedor-tarjetas" id="contenedor-tarjetas">
+            <div class="tarjeta-orden">
+                <div  class="fw-bolder">Orden:233</div>
+                <div class="d-flex justify-content-space-around">
+                    <div>
+                        <div><img src="img/McDonalds_logo 1.png" alt="logoEmpresa"></div>
+                    </div>
+                    <div class=" ms-2 ">
+                        <p class="text-center"> Big Hamburguesa, biggets, ...</p>
+                    </div>
+                </div>
+                <div class="info-tarjeta">Entrega: El Carrizal</div>
+                <div class="d-flex justify-content-space-around">
+                    <div class="btn-primary"  onclick="seleccionarOpcion(6,4)">Ver Detalle</div>
+                    <div class="btn-primary" onclick="seleccionarOpcion(4,3)">Tomar</div>
+                </div>
+            </div>
+
+            <div class="tarjeta-orden">
+                <div class="fw-bolder">Orden:234</div>
+                <div class="d-flex justify-content-space-around">
+                    <div>
+                        <div><img src="img/McDonalds_logo 1.png" alt="logoEmpresa"></div>
+                    </div>
+                    <div class="ms-2">
+                        <p class="text-center"> Big Hamburguesa, biggets, ...</p>
+                    </div>
+                </div>
+                <div class="info-tarjeta">Entrega: El Carrizal</div>
+                <div class="d-flex justify-content-space-around">
+                    <div class="btn-primary" onclick="seleccionarOpcion(6,4)">Ver Detalle</div>
+                    <div class="btn-primary">Tomar</div>
+                </div>
+            </div>
+
+            <div class="tarjeta-orden">
+                <div class="fw-bolder">Orden:235</div>
+                <div class="d-flex justify-content-space-around">
+                    <div>
+                        <div><img src="img/McDonalds_logo 1.png" alt="logoEmpresa"></div>
+                    </div>
+                    <div class=" ms-2 ">
+                        <p class="text-center"> Big Hamburguesa, biggets, ...</p>
+                    </div>
+                </div>
+                <div class="info-tarjeta">Entrega: El Carrizal</div>
+                <div class="d-flex justify-content-space-around">
+                    <div class="btn-primary" onclick="seleccionarOpcion(6,4)">Ver Detalle</div>
+                    <div class="btn-primary me-1">Tomar</div>
+                </div>
+            </div>
+
+            <div class="tarjeta-orden">
+                <div class="fw-bolder">Orden:236</div>
+                <div class="d-flex justify-content-space-around">
+                    <div>
+                        <div><img src="img/McDonalds_logo 1.png" alt="logoEmpresa"></div>
+                    </div>
+                    <div class=" ms-2 ">
+                        <p class="text-center"> Big Hamburguesa, biggets, ...</p>
+                    </div>
+                </div>
+                <div class="info-tarjeta">Entrega: El Carrizal</div>
+                <div class="d-flex justify-content-space-around">
+                    <div class="btn-primary" onclick="seleccionarOpcion(6,4)">Ver Detalle</div>
+                    <div class="btn-primary me-1">Tomar</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-end mt-5 m-4">
+            <img src="img/media/undraw_option.svg" alt="cargando" height="130px" width="160px">
+        </div>
+
+    </section>
+
+    <section class="contenido-4" id="seccion-Opendientes">
+        <div class="section-tittle">
+            <div class="img-tittle">
+                <img src="img/media/undraw_delivery_address_re_cjca (1).svg" alt="error" height="80px" width="100px">
+            </div>
+            <span>
+                <h3> ÓRDENES PENDIENTES</Hh3>
+            </span>
+        </div>
+
+        <div class="parrafo mt-3" id="parrafo">
+            <p class="fw-bold">Se muestran las órdenes pendientes. ¡Selecciona el estado! </p>
+        </div>
+
+        <div class="contenedor-tarjetas">
+            <div class="tarjeta-orden">
+                <div class="fw-bolder">Orden:230</div>
+                <div class="d-flex justify-content-space-around">
+                    <div>
+                        <div><img src="img/McDonalds_logo 1.png" alt="logoEmpresa"></div>
+                    </div>
+                    <div class=" ms-2 ">
+                        <p class="text-center"> Big Hamburguesa, biggets, ...</p>
+                    </div>
+                </div>
+                <div class="info-tarjeta">Entrega: Ulloa</div>
+                <div class="d-flex justify-content-space-around">
+                    <div class="btn-primary" onclick="seleccionarOpcion(6,4)">Ver Detalle</div>
+                    <div class="btn-primary me-1">Estado</div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="pt-5 text-center">
+            <span class="tittle-estado ">Selecciona el estado de la orden:</span>
+
+            <div class="estadoOrden">
+                <div onclick="seleccionarEstado(1)">
+                    <i class="fa-solid fa-flag-checkered"> </i>
+                </div>
+                <div onclick="seleccionarEstado(2)">
+                    <i class="fa-solid fa-hourglass-half"></i>
+                </div>
+                <div onclick="seleccionarEstado(3)">
+                    <i class="fa-solid fa-clipboard-check"></i>
+                </div>
+            </div>
+            <div class="d-flex justify-content-evenly mt-1">
+                <span class="fw-bold">En el origen</span>
+                <span class="fw-bold">En camino</span>
+                <span class="fw-bold">Entregado</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="contenido-5" id="seccion-Oentregadas">
+        <div class="section-tittle">
+            <div class="img-tittle">
+                <img src="img/media/undraw_chore_list_re_2lq8.svg" alt="error" height="80px" width="100px">
+            </div>
+            <span>
+                <h3> Órdenes Entregadas</Hh3>
+            </span>
+        </div>
+
+        <div class="parrafo" id="parrafo">
+            <p>Tabla con órdenes entregadas. ¡Mira todo lo que has logrado! </p>
+        </div>
+
+        <table class="table-bordered border-dark" id="tablaOEntregadas">
+
+        </table>
+
+        <br>
+        <table class="comisionTotal table-bordered border-dark" id="comisionTotal">
+            <tr>
+                <th>No. Entregas</th>
+                <th>Comisión Total</th>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Lps. 90</td>
+            </tr>
+        </table>
+
+        <div class="d-flex justify-content-end m-4">
+            <img src="img/media/undraw_booking_re_gw4j.svg" alt="cargando" height="130px" width="160px">
+        </div>
+    </section>
+
+    <section class="factura-motorista" id="factura-motorista">
+        <div class="title-factura">
+            <h3> DETALLE DE FACTURA:</h3>
+        </div>
+
+        <div class="container-factura">
+            <div class="title-factura d-flex justify-content-center">
+                <h3>FACTURA</h3>
+            </div>
+            <div class="d-flex justify-content-center">
+                <img src="img/Empresas/McDonalds_logo 1.png" alt="logo" width="90px" height="60px">
+            </div>
+
+            <div class="container-info-factura">
+                <div class="datos-entrega">
+                    <div>Nombre: Kylian Mbappé</div>
+                    <div>Dirección: Ulloa</div>
+                    <div>Ciudad: Tegucigalpa</div>
+                    <div>No. Orden: 544</div>
+                </div>
+                <div class="location-entrega"><i class="fa-solid fa-map-location-dot" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal"></i></div>
+            </div>
+
+            <div class="container-table" id="dataFactura">
+                <div class="table-header">#</div>
+                <div class="table-header">Código</div>
+                <div class="table-header">Descripción</div>
+                <div class="table-header">Cantidad</div>
+                <div class="table-header">Precio(unit)</div>
+
+                <div class="table-item">1</div>
+                <div class="table-item">a2</div>
+                <div class="table-item">Hamburguesa</div>
+                <div class="table-item">2</div>
+                <div class="table-item">100</div>
+                <div class="table-item">2</div>
+                <div class="table-item">a3</div>
+                <div class="table-item">Cervezas</div>
+                <div class="table-item">6</div>
+                <div class="table-item">120</div>
+            </div>
+            <div class="container-calculosFactura">
+                <div class="container-description">
+                    <div class="mb-1">Subtotal:</div>
+                    <div class="mb-1">Descuento:</div>
+                    <div class="mb-1">ISV:</div>
+                    <div class="mb-1">Envío:</div>
+                    <div class="fw-bold mb-1">Total Factura:</div>
+                </div>
+                <div class="valores-factura">
+                    <div>Lps 220</div>
+                    <div>Lps 0</div>
+                    <div>Lps 19</div>
+                    <div>Lps 55.95</div>
+                    <div class="fw-bold">Lps 275.95</div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center mb-5">
+            <button type="button" class="btn btn-primary btn-lg " id="btn-tomarOrden"
+                onclick="seleccionarOpcion(4)">Tomar
+                Orden</button>
+        </div>
+
+    </section>
+
+    <section class="perfil-motorista" id="perfil-motorista">
+        <div class="perfil">
+            <div style="width: 100%;" class="d-flex justify-content-star">
+                <a id="back3" onclick="regresar()"><i class='bx bxs-chevrons-left'></i></a>
+            </div>
+            <br>
+
+            <div class="imgPerfil d-flex justify-content-center m-0">
+
+            </div>
+
+            <br>
+            <h3 class="mt-2" id="nombreM">Luis Aurelio López</h3>
+            <p>FM-019</p>
+            <br>
+            <p class="mb-0 " id="telefonoM">Teléfono:</p>
+            <div class="d-flex justify-content-center bg-secondary bg-opacity-25 ">
+                <div class="me-3" id="telefonoM">8765-2624</div>
+                <div><i class="fa-solid fa-pen-to-square"></i></div>
+            </div>
+            <br>
+            <p class="mb-0">Dirección:</p>
+            <div class="d-flex justify-content-center bg-secondary bg-opacity-25">
+                <div class="me-3" id="direccionM">Tegucigalpa, Col. Carrizal</div>
+                <div><i class="fa-solid fa-pen-to-square"></i></div>
+            </div>
+            <br>
+            <p class="mb-0">Correo Electrónico:</p>
+            <div class="d-flex justify-content-center bg-secondary bg-opacity-25">
+                <div class="me-3" id="correoM">Luis@gmail.com</div>
+                <div><i class="fa-solid fa-pen-to-square"></i></div>
+            </div>
+            <br>
+            <div class="mt-5 mb-0">
+               <!--<img src="img/Icono_E.svg" alt="" height="80px" width="100px">--> 
+            </div>
+            <br>
+        </div>
+    </section>
+
+    <!-- Modal GPS -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel" style="color: black;">DESTINO DE ENTREGA</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex justify-content-center">
+                    <!--img de muestra-->
+                    <img src="img/img_mapa_prueba.png" alt="ubicación cargando" width="280px" height="220px">
+                </div>
+                <div class="modal-footer">
+                    <span>Colonia Carrizal, sector 4,...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
+    <script src="js/controlador.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/menu.js"></script>
+
+</body>
+
+</html>

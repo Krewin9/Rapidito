@@ -1,0 +1,449 @@
+
+body {
+    background-color: #4B045b;
+    color: black;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.adminEmpresas{
+    display: none; 
+}
+/*------------------------------LOGIN*/
+.screen-login header{
+    background-color: #d7cada;
+}
+.screen-login{
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+}
+
+.logo-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 30px;
+    height:120px;
+}
+
+.logo-login img{
+    width: 160px;
+    height: 160px;
+}
+
+.login{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    background-color: #d7cada;
+}
+
+
+.img-left{
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.img-right{
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+/*------colores
+
+#4b045b
+#d7cada
+#6c357a
+#8c649c
+
+
+*/
+#log-in {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: center;
+    background-color: #4B045b;
+    border-radius: 10px;
+    margin: 30px 30px 20px 0;
+    padding: 15px;
+    height:fit-content;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    color: #d7cada;
+    font-size:15px;
+    font-weight: bold;
+}
+
+#log-in p {
+    font-family: 'Anton', sans-serif;
+    font-size: 1rem;
+}
+
+#log-in button {
+    background-color:#6c357a;
+    color: #d7cada;
+}
+
+#log-in button:hover{
+    background-color:#94749c;
+    color: #d7cada;
+}
+
+#buttons {
+    padding-top: 15px;
+    margin-right: 10px;
+    margin-left: 120px;
+    margin-bottom: 5px;
+}
+
+#buttons a {
+    color: #d7cada;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+.btn-primary {
+    background-color: #4B045b;
+    width: 160px;
+    color: #000000;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 10px;
+    padding: 4px 16px;
+}
+
+.btn-primary:hover {
+    --bs-btn-hover-color: #d7cada;
+    --bs-btn-hover-bg: rgb(118, 6, 170);
+    --bs-btn-active-bg: rgb(118, 6, 170);
+}
+
+.input-group {
+    position: inherit !important;
+    height: 25px !important;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+}
+.input-group-text{
+    height: 25px !important;
+}
+
+
+.input-group>.form-control,
+.input-group>.form-select {
+    position: inherit !important;
+    flex: 1 1 auto;
+    width: 1%;
+    min-width: 0;
+}
+
+input:focus {
+    outline-width: 0;
+
+}
+
+.input-error {
+    border: 1px solid #ff0000;
+}
+
+.input-success {
+    border: 1px solid #7CF000;
+}
+
+.formEmpresas .input-group , .form-control{
+    height:25px !important;
+    font-size: 15px !important;
+}
+
+.formEmpresas label{
+    margin-bottom: 0 !important;
+    font-size: 15px;
+    text-align: center;
+    line-height: 25px;
+    margin-right: 5px;
+}
+
+.formEmpresas select{
+    border: 1px solid #ced4da;
+}
+
+/*-------------------------------------------FOOTER*/
+footer {
+    /*background-color: rgba(6, 41, 107, 1);*/
+    background-color: #4B045b;
+    color: #d7cada;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 45px;
+    font-size:9px;
+    padding: 3px 25px 3px 25px;
+}
+
+footer div {
+    display: flex;
+    justify-content: space-between;
+    height:fit-content;
+    width: 100%;
+    padding: 0;
+}
+
+footer a {
+    color: #d7cada;
+    text-align: center;
+    font-family: 'Comfortaa', cursive;
+    text-decoration: none;
+}
+
+footer .redesSociales {
+    padding-right: 35px;
+}
+
+/*--------------------------SECCIONES-ESTRUCTURA*/
+.contenedor-admiEmpresas{
+    width: 100%;
+    display: grid;
+    height: 100vh;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 25% 75%;
+    /*background-color: #4B045b;*/
+    background-color:#4B045b;
+    height: 100vh;
+}
+.header-contenido{
+    display: grid;
+    grid-area: 1/1/2/3;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    display: flex;
+    /*justify-content:start;*/
+    align-items: center;
+    padding-left: 55px;
+    height:90px;
+}
+
+.logo img{
+    width: 130px;
+    height: 130px;
+}
+
+.header-contenido .fa-solid{
+    font-size: 25px;
+    margin: 3px;
+    color: #e7e8e8;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #d7cada;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.menu i{
+    font-size:21px;
+    margin-right: 8px;
+}
+
+.menu div:hover{
+    color: #4B045b;
+}
+
+.footerC{
+    background-color: #c2c0c0;
+    color: #000000;
+    font-weight: bold;
+    grid-area: 3/2 /4/ 3;
+    font-size:  8px;
+    padding: 5px 25px 5px 25px !important;
+    margin-bottom: 0%;
+    bottom: 0;
+}
+
+.footerC a{
+    color:#000000;
+    font-weight: normal;
+}
+
+.footerC i{
+    color:#000000;
+}
+
+.contenido{
+    grid-area: 2/2 /3/ 3;
+
+    display: grid;
+    grid: template columns 100%;
+    grid-template-rows:1fr;
+}
+
+/*---------Contenido principal*/
+.seccion-productos{
+    background-color:#f0f0ed;
+}
+
+.barra-nav{
+    width: 100%;
+    background-color: #d7cada;
+    font-family: 'Inter', sans-serif;
+    border-bottom: 1px solid rgb(46, 46, 46);
+    color: #6c357a;
+}
+
+.barra-nav span{
+    margin-left: 8px;
+}
+
+.main-content{
+    padding-top: 70px;
+    height: 100%;
+    
+}
+
+.title{
+    font-family: 'Anton', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: #4B045b;
+}
+/*
+.empresas div{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: small;
+    font-family: 'Inter', sans-serif;
+}*/
+
+.empresas .img-categoria img{
+    width: 60px;
+    height: auto;
+    margin: 1rem 1rem 1rem 1rem ;
+}
+
+.empresas .img-categoria{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.crud span{
+    background-color: #5c1b6c;
+    width: 120px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.crud span:hover{
+    background-color:#4B045b;
+    color: #d7cada;
+    width: 120px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.dataEmpresas{
+    background-color: #4B045b !important;
+}
+.dataEmpresas p{
+    font-family: 'Anton', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: #d7cada;
+}
+
+.categoria-producto span:hover{
+    background-color: #4B045b;
+    color: #d7cada;
+}
+/*-------------------------------------------TARJETAS ÓRDENES*/
+.tarjeta-orden{
+    /*background-color: #ccd0cf;*/
+    display: flex;
+    flex-direction: column;
+    background-color: #6c357aac;
+    border-radius: 10px;
+    margin: 10px 20px;
+    padding: 10px;
+    color: #000000;
+}
+
+.tarjeta-orden .btn-primary{
+    border-radius: 5px;
+    margin: 0 4px 0 4px;
+    width:auto;
+    text-align: center;
+    background-color: #4B045b;
+    color: #d7cada;
+} 
+
+.info-tarjeta{
+    margin: 5px 0 ;
+}
+.ver-detalle{
+    cursor: pointer;
+    color: #4B045b;
+    text-align: center;
+    font-weight:bold ;
+}
+.contenedor-tarjetas{
+    display: flex;
+}
+
+
+/*-------------------------------------------table*/
+table {
+    background-color: #d7cada;
+    margin: auto;
+    text-align: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    color: #000000;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+}
+
+th {
+    color: #d7cada;
+    padding: 3px 5px;
+    background-color: #4b045b;
+    height: 25px !important;
+}
+
+#seleccionarOrden {
+    cursor: pointer;
+}
+
+#seleccionarOrden:hover {
+    background-color: rgb(61, 214, 116);
+}
+
+#verFactura {
+    cursor: pointer;
+}
+
+#verFactura:hover {
+    background-color: rgb(61, 214, 116);
+}

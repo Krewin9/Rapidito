@@ -1,5 +1,8 @@
 import express, { Request, Response, Express } from 'express';
 import cors from 'cors';
+import { Database } from './utils/database'; 
+
+const db:Database = new Database()
 
 const app:Express = express();
 const PORT = 3000;

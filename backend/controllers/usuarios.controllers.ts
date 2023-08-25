@@ -19,13 +19,3 @@ export const obtenerUsuario = (req: Request, res: Response) => {
   res.send("Obtenner usuario está funcionando " + req.params.id);
   res.end();
 }
-
-export const obtenerListaPerfiles = async (req: Request, res: Response) => {
-  const usuario = await UserSchema.findById(req.params.id, {profiles: true});
-  if (usuario) {
-    res.send({status: true, message: 'Perfiles obtenidos con exito', profiles: usuario.profiles});
-  }
-  else 
-    res.send({status: false, message: 'Usuario no existe'});
-  res.end();
-}

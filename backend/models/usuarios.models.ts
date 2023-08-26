@@ -11,7 +11,7 @@ export interface User {
 }
 
 export interface orden{
-  
+  _id?: mongoose.Types.ObjectId; 
   nombreProducto: string;
   descripcion: string;
   precio: number;

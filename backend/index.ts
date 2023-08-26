@@ -1,6 +1,8 @@
 import express, { Request, Response, Express } from 'express';
 import cors from 'cors';
 import userRouter from './routes/usuarios.routers';
+import empresasRouter from './routes/empresas.routers';
+import categoriasRouter from './routes/categorias.routers';
 import { Database } from './utils/database'; 
 
 
@@ -11,6 +13,8 @@ const PORT = 3000;
 app.use(cors());
 app.use(express.json());
 app.use('/users', userRouter);
+app.use('/categorias', categoriasRouter);
+app.use('/empresas', empresasRouter);
 
 
 app.get("/pruebas", (req:Request, res: Response) => {

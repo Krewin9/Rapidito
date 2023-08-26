@@ -3,13 +3,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.categoriaSchema = void 0;
+exports.empresaSchema = void 0;
 const mongoose_1 = __importDefault(require("mongoose"));
 const schema = new mongoose_1.default.Schema({
-    nombreCategoria: String,
-    descripcion: String,
-    color: String,
-    icono: String,
-    empresas: (Array)
+    nombreEmpresa: String,
+    imagen: String,
+    producto: (Array)
 });
-exports.categoriaSchema = mongoose_1.default.model('categorias', schema); // enlace
+exports.empresaSchema = mongoose_1.default.model('empresas', schema); // enlace 

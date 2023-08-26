@@ -1,0 +1,22 @@
+POST http://localhost:3000/users/crearusuario HTTP/1.1
+Content-Type: application/json
+
+{
+"nombre": "Krewin",
+  "apellidos": "Murilllo",
+  "ordenes": {
+    "nombreProducto":"Baleadas",
+    "Descripcion":"Con todo",
+    "precio":"113"}
+
+}
+###
+
+GET http://localhost:3000/users/usuarios HTTP/1.1
+Content-Type: application/json
+
+
+###
+
+POST http://localhost:3000/ HTTP/1.1
+Content-Type: application/json

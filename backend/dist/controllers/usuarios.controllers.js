@@ -9,21 +9,29 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.obtenerUsuario = exports.login = void 0;
+exports.getAllUsers = exports.createUser = void 0;
 const usuarios_schema_1 = require("../models/usuarios.schema");
-const login = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const usuario = yield usuarios_schema_1.UserSchema.findOne({ email: req.body.email, password: req.body.password }, { password: false });
-    if (usuario) {
-        res.send({ status: true, message: 'Login correcto', usuario });
+// Controlador para crear un nuevo usuario
+const createUser = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const userData = req.body;
+        const newUser = yield usuarios_schema_1.UserSchema.create(userData);
+        res.status(201).json(newUser);
     }
-    else
-        res.send({ status: false, message: 'Login incorrecto' });
-    res.end();
+    catch (error) {
+        res.status(500).json({ error: 'Ha ocurrido un error al crear el usuario.' });
+    }
 });
-exports.login = login;
-// (Controlador de usuarios) Obtener los detalles de un usuario
-const obtenerUsuario = (req, res) => {
-    res.send("Obtenner usuario está funcionando " + req.params.id);
-    res.end();
-};
-exports.obtenerUsuario = obtenerUsuario;
+exports.createUser = createUser;
+// Controlador para obtener todos los usuarios
+const getAllUsers = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const users = yield usuarios_schema_1.UserSchema.find();
+        res.status(200).json(users);
+    }
+    catch (error) {
+        res.status(500).json({ error: 'Ha ocurrido un error al obtener los usuarios.' });
+    }
+});
+exports.getAllUsers = getAllUsers;
+// Otros controladores (actualización, eliminación, etc.) seguirían un patrón similar

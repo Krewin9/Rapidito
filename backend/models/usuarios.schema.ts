@@ -1,10 +1,11 @@
 import mongoose from "mongoose";
-import { User } from "./usuarios.models";
+import { User, orden } from "./usuarios.models";
 
 
 const schema = new mongoose.Schema<User>({
-  email: String,
-  password: String,
+  nombre: String,
+  apellidos: String,
+  ordenes:Array<orden>
  
 });
 

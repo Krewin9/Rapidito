@@ -1,16 +1,18 @@
 POST http://localhost:3000/users/crearusuario HTTP/1.1
 Content-Type: application/json
 
+
+//para agregar a la base de datos de usuarios
 {
-"nombre": "Krewin",
-  "apellidos": "Murilllo",
+"nombre": "Erick ",
+  "apellidos": "Vladimir",
   "ordenes": {
-    "nombreProducto":"Baleadas",
-    "Descripcion":"Con todo",
-    "precio":"113"}
+    "nombreProducto":" ",
+    "Descripcion":" ",
+    "precio":"0"}
 
 }
-###
+### 
 
 GET http://localhost:3000/users/usuarios HTTP/1.1
 Content-Type: application/json
@@ -18,5 +20,61 @@ Content-Type: application/json
 
 ###
 
-POST http://localhost:3000/ HTTP/1.1
+
+// crear categorias
+POST http://localhost:3000/categorias/crearCategoria HTTP/1.1
+Content-Type: application/json
+
+{
+  "nombreCategoria": "Tickets",
+  "descripcion": ".",
+  "color": "#8c649c",
+  "icono": "fa fa-calculator",
+   "empresas":[ {
+                  "nombreEmpresa": "BAC Entradas",
+                  "imagen": "img/rapidito.png",
+                  "producto": [{
+                                "nombreProducto": "Olimpia vs Motagua",
+                                "descripcion": "Sol",
+                                "precio": 149
+                              },
+                              {
+                                "nombreProducto": "Motagua vs Olimpia",
+                                "descripcion": "Palco",
+                                "precio": 349
+                              }
+                              
+                              ]
+         
+                },
+                {
+                  "nombreEmpresa": "Todo Ticket",
+                  "imagen": "img/rapidito.png",
+                  "producto": [{
+                                "nombreProducto": "Arcangel",
+                                "descripcion": "Preferencial",
+                                "precio": 349
+                              },
+                              {
+                                "nombreProducto": "Ozuna",
+                                "descripcion": "VIP 1",
+                                "precio": 249
+                              }
+                              
+                              ]
+         
+                }
+   ]
+            
+        
+
+}
+
+
+###
+
+
+// mostrar categorias
+
+GET http://localhost:3000/categorias/categorias HTTP/1.1
 Content-Type: application/json

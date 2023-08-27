@@ -223,7 +223,7 @@ function validarPassword(campo) {
 let ordenesPendientes = [
     {
         noOrden: 122,
-        usuario: "Paola",
+        usuario: "Tia Paola",
         factura: [
             {
                 productos: [{
@@ -237,7 +237,7 @@ let ordenesPendientes = [
                     valorProd: 100
                 }
                 ],
-                comisionOrden: 44
+                 
             }
         ]
     },
@@ -257,7 +257,7 @@ let ordenesPendientes = [
                     valorProd: 100
                 }
                 ],
-                comisionOrden: 44
+                 
             }
         ]
     }
@@ -281,7 +281,7 @@ let ordenesEntregadas = [
                     valorProd: 100
                 }
                 ],
-                comisionOrden: 44
+                 
             }
         ]
     },
@@ -301,7 +301,7 @@ let ordenesEntregadas = [
                     valorProd: 100
                 }
                 ],
-                comisionOrden: 44
+                 
             }
         ]
     }

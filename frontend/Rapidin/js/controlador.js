@@ -10,10 +10,10 @@ var usuariosJSON = [
                 precio:0
             },
         ]
-    },
-    {
-        nombre:"Carlos",
-        apellido:"Rios",
+    }, 
+    { 
+        nombre:"Erick",
+        apellido:"Vladimir",
         ordenes:[
              {
                 nombreProducto:" ",

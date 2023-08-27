@@ -3,6 +3,8 @@ import cors from 'cors';
 import userRouter from './routes/usuarios.routers';
 import empresasRouter from './routes/empresas.routers';
 import categoriasRouter from './routes/categorias.routers';
+import ordenesRouter from './routes/ordenes.routers';
+
 import { Database } from './utils/database'; 
 
 
@@ -15,6 +17,7 @@ app.use(express.json());
 app.use('/users', userRouter);
 app.use('/categorias', categoriasRouter);
 app.use('/empresas', empresasRouter);
+app.use('/ordenes', ordenesRouter);
 
 
 app.get("/pruebas", (req:Request, res: Response) => {

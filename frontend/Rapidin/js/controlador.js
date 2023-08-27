@@ -1,4 +1,28 @@
 
+const userList = document.getElementById("user-list");
+
+        // Realizar la solicitud GET a la API del backend
+        fetch("http://localhost:3000/users")
+            .then(response => response.json())
+            .then(users => {
+                
+                users.forEach(user => {
+                    const listItem = document.createElement("li");
+                    listItem.textContent = `${user.name} - ${user.email}`;
+                    userList.appendChild(listItem);
+                });
+            })
+            .catch(error => {
+                console.error("Error al obtener los usuarios:", error);
+            });
+
+
+
+
+
+
+            
+
 var usuariosJSON = [
     {
         nombre:"Krewin",
@@ -333,7 +357,7 @@ var categoriasJSON = [
         icono:"fa fa-motorcycle",
         empresas:[
             {
-                nombreEmpresa: "Rapidin-Auto",
+                nombreEmpresa: "Rapi-Auto",
                 imagen:"img/rapidito.png",
                 productos:[
                     {
@@ -349,7 +373,7 @@ var categoriasJSON = [
                 ]
             },
             {
-                nombreEmpresa: "Rapidin-Moto",
+                nombreEmpresa: "RapiMoto",
                 imagen:"img/rapidito.png",
                 productos:[
                     {
@@ -368,6 +392,7 @@ var categoriasJSON = [
         ]
     },
 ];
+
 
 
 let celda='';

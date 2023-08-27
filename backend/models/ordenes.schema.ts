@@ -9,4 +9,4 @@ const schema = new mongoose.Schema<OrdenM>({
  
 });
 
-export const OrdenesMSchema = mongoose.model('ordenes',schema);// enlace
+export const OrdenesMSchema = mongoose.model('ordenes',schema);

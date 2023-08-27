@@ -10,4 +10,4 @@ const schema = new mongoose_1.default.Schema({
     imagen: String,
     producto: (Array)
 });
-exports.empresaSchema = mongoose_1.default.model('empresas', schema); // enlace 
+exports.empresaSchema = mongoose_1.default.model('empresas', schema);

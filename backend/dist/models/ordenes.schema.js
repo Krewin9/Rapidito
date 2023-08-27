@@ -10,4 +10,4 @@ const schema = new mongoose_1.default.Schema({
     usuario: String,
     factura: (Array)
 });
-exports.OrdenesMSchema = mongoose_1.default.model('ordenes', schema); // enlace
+exports.OrdenesMSchema = mongoose_1.default.model('ordenes', schema);

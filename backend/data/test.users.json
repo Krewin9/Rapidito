@@ -1,0 +1,30 @@
+[{
+  "_id": {
+    "$oid": "64eab698a824c8f7455b618c"
+  },
+  "nombre": "Krewin",
+  "apellidos": "Murilllo",
+  "ordenes": [
+    {
+      "nombreProducto": " ",
+      "Descripcion": " ",
+      "precio": "0"
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64eab6b9a824c8f7455b618e"
+  },
+  "nombre": "Erick ",
+  "apellidos": "Vladimir",
+  "ordenes": [
+    {
+      "nombreProducto": " ",
+      "Descripcion": " ",
+      "precio": "0"
+    }
+  ],
+  "__v": 0
+}]

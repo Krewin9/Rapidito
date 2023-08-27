@@ -10,4 +10,4 @@ const schema = new mongoose_1.default.Schema({
     apellidos: String,
     ordenes: (Array)
 });
-exports.UserSchema = mongoose_1.default.model('users', schema); // enlace
+exports.UserSchema = mongoose_1.default.model('users', schema);

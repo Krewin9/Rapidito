@@ -9,4 +9,4 @@ const schema = new mongoose.Schema<Empresa>({
     producto: Array<Producto>
 });
 
-export const empresaSchema = mongoose.model('empresas',schema);// enlace 
+export const empresaSchema = mongoose.model('empresas',schema);

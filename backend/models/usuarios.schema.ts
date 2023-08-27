@@ -9,4 +9,4 @@ const schema = new mongoose.Schema<User>({
  
 });
 
-export const UserSchema = mongoose.model('users',schema);// enlace
+export const UserSchema = mongoose.model('users',schema);

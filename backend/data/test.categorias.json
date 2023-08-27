@@ -1,0 +1,352 @@
+[{
+  "_id": {
+    "$oid": "64eac24c16036015d07bbb85"
+  },
+  "nombreCategoria": "Desayunos",
+  "descripcion": "Un cafelito?",
+  "color": "#8c649c",
+  "icono": "fa fa-coffee",
+  "empresas": [
+    {
+      "nombreEmpresa": "Coco-Baleada",
+      "imagen": "img/rapidito.png",
+      "producto": [
+        {
+          "nombreProducto": "Huevitos Revueltos",
+          "descripcion": "Huevos Revueltos, Chorizo + refresco",
+          "precio": 49
+        },
+        {
+          "nombreProducto": "Desayuno Tipico",
+          "descripcion": "Huevos Revueltos, Chorizo + refresco",
+          "precio": 49
+        }
+      ]
+    },
+    {
+      "nombreEmpresa": "Baleadas Olanchito",
+      "imagen": "img/rapidito.png",
+      "producto": [
+        {
+          "nombreProducto": "Huevitos Revueltos",
+          "descripcion": "Huevos Revueltos, Chorizo + refresco",
+          "precio": 49
+        },
+        {
+          "nombreProducto": "Desayuno Tipico",
+          "descripcion": "Huevos Revueltos, Chorizo + refresco",
+          "precio": 49
+        }
+      ]
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64eac34716036015d07bbb87"
+  },
+  "nombreCategoria": "Almuerzos",
+  "descripcion": ".",
+  "color": "#8c649c",
+  "icono": "fas fa-plug",
+  "empresas": [
+    {
+      "nombreEmpresa": "Toro Bravo",
+      "imagen": "img/rapidito.png",
+      "producto": [
+        {
+          "nombreProducto": "Carne",
+          "descripcion": "Carne, frijoles, y chismol",
+          "precio": 69
+        },
+        {
+          "nombreProducto": "Sopa de Pollo",
+          "descripcion": "sopa de Pollo",
+          "precio": 120
+        }
+      ]
+    },
+    {
+      "nombreEmpresa": "Burger King",
+      "imagen": "img/rapidito.png",
+      "producto": [
+        {
+          "nombreProducto": "Whopper Jr",
+          "descripcion": "Hamburguesa de Carne y Queso",
+          "precio": 49
+        },
+        {
+          "nombreProducto": "King De Pollo",
+          "descripcion": "Hamburguesa de Pollo",
+          "precio": 49
+        }
+      ]
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64eac39516036015d07bbb89"
+  },
+  "nombreCategoria": "Cenas",
+  "descripcion": ".",
+  "color": "#8c649c",
+  "icono": "fa fa-gift",
+  "empresas": [
+    {
+      "nombreEmpresa": "Coco-Baleada",
+      "imagen": "img/rapidito.png",
+      "producto": [
+        {
+          "nombreProducto": "Huevitos Revueltos",
+          "descripcion": "Huevos Revueltos, Chorizo + refresco",
+          "precio": 49
+        },
+        {
+          "nombreProducto": "Desayuno Tipico",
+          "descripcion": "Huevos Revueltos, Chorizo + refresco",
+          "precio": 49
+        }
+      ]
+    },
+    {
+      "nombreEmpresa": "Baleadas Olanchito",
+      "imagen": "img/rapidito.png",
+      "producto": [
+        {
+          "nombreProducto": "Huevitos Revueltos",
+          "descripcion": "Huevos Revueltos, Chorizo + refresco",
+          "precio": 49
+        },
+        {
+          "nombreProducto": "Desayuno Tipico",
+          "descripcion": "Huevos Revueltos, Chorizo + refresco",
+          "precio": 49
+        }
+      ]
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64eac42316036015d07bbb8b"
+  },
+  "nombreCategoria": "Farmacias",
+  "descripcion": ".",
+  "color": "#8c649c",
+  "icono": "fa fa-medkit",
+  "empresas": [
+    {
+      "nombreEmpresa": "Kielsa",
+      "imagen": "img/rapidito.png",
+      "producto": [
+        {
+          "nombreProducto": "Kit de Emergencia",
+          "descripcion": "Primeros Auxilios",
+          "precio": 149
+        },
+        {
+          "nombreProducto": "Pruebas Covid",
+          "descripcion": "PCR",
+          "precio": 349
+        }
+      ]
+    },
+    {
+      "nombreEmpresa": "Siman",
+      "imagen": "img/rapidito.png",
+      "producto": [
+        {
+          "nombreProducto": "Pruebas Covid-PCR",
+          "descripcion": "PCR",
+          "precio": 349
+        },
+        {
+          "nombreProducto": "Pruebas Covid",
+          "descripcion": "Antigeno",
+          "precio": 249
+        }
+      ]
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64eac51216036015d07bbb8d"
+  },
+  "nombreCategoria": "Tickets",
+  "descripcion": ".",
+  "color": "#8c649c",
+  "icono": "fa fa-calculator",
+  "empresas": [
+    {
+      "nombreEmpresa": "BAC Entradas",
+      "imagen": "img/rapidito.png",
+      "producto": [
+        {
+          "nombreProducto": "Olimpia vs Motagua",
+          "descripcion": "Sol",
+          "precio": 149
+        },
+        {
+          "nombreProducto": "Motagua vs Olimpia",
+          "descripcion": "Palco",
+          "precio": 349
+        }
+      ]
+    },
+    {
+      "nombreEmpresa": "Todo Ticket",
+      "imagen": "img/rapidito.png",
+      "producto": [
+        {
+          "nombreProducto": "Arcangel",
+          "descripcion": "Preferencial",
+          "precio": 349
+        },
+        {
+          "nombreProducto": "Ozuna",
+          "descripcion": "VIP 1",
+          "precio": 249
+        }
+      ]
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ead9139dd075f74bcd1863"
+  },
+  "nombreCategoria": "Bebidas",
+  "descripcion": ".",
+  "color": "#8c649c",
+  "icono": "fa fa-beer",
+  "empresas": [
+    {
+      "nombreEmpresa": "Cerveria Hondureña",
+      "imagen": "img/rapidito.png",
+      "producto": [
+        {
+          "nombreProducto": "Salva Vida",
+          "descripcion": ".",
+          "precio": 49
+        },
+        {
+          "nombreProducto": "Imperial",
+          "descripcion": ".",
+          "precio": 49
+        }
+      ]
+    },
+    {
+      "nombreEmpresa": "Copan Dry",
+      "imagen": "img/rapidito.png",
+      "producto": [
+        {
+          "nombreProducto": "Copan Dry",
+          "descripcion": "Preferencial",
+          "precio": 349
+        },
+        {
+          "nombreProducto": "Beer Artesanal",
+          "descripcion": "VIP 1",
+          "precio": 249
+        }
+      ]
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ead9869dd075f74bcd1865"
+  },
+  "nombreCategoria": "Pagos",
+  "descripcion": ".",
+  "color": "#8c649c",
+  "icono": "fa fa-id-card",
+  "empresas": [
+    {
+      "nombreEmpresa": "AMDC",
+      "imagen": "img/rapidito.png",
+      "producto": [
+        {
+          "nombreProducto": "Impuestos",
+          "descripcion": ".",
+          "precio": 1149
+        },
+        {
+          "nombreProducto": "Matricula",
+          "descripcion": ".",
+          "precio": 4449
+        }
+      ]
+    },
+    {
+      "nombreEmpresa": "ENEE",
+      "imagen": "img/rapidito.png",
+      "producto": [
+        {
+          "nombreProducto": "Energia",
+          "descripcion": "Preferencial",
+          "precio": 349
+        },
+        {
+          "nombreProducto": "Cambio de Luces",
+          "descripcion": ".",
+          "precio": 249
+        }
+      ]
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ead9f89dd075f74bcd1867"
+  },
+  "nombreCategoria": "Mandaditos",
+  "descripcion": ".",
+  "color": "#8c649c",
+  "icono": "fa fa-motorcycle",
+  "empresas": [
+    {
+      "nombreEmpresa": "Rapi-Auto",
+      "imagen": "img/rapidito.png",
+      "producto": [
+        {
+          "nombreProducto": "Encomienda",
+          "descripcion": ".",
+          "precio": 1149
+        },
+        {
+          "nombreProducto": "Taxi",
+          "descripcion": ".",
+          "precio": 4449
+        }
+      ]
+    },
+    {
+      "nombreEmpresa": "RapiMoto",
+      "imagen": "img/rapidito.png",
+      "producto": [
+        {
+          "nombreProducto": "MotoMami",
+          "descripcion": "Preferencial",
+          "precio": 349
+        },
+        {
+          "nombreProducto": "Motopapi",
+          "descripcion": ".",
+          "precio": 249
+        }
+      ]
+    }
+  ],
+  "__v": 0
+}]

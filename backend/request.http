@@ -26,38 +26,38 @@ POST http://localhost:3000/categorias/crearCategoria HTTP/1.1
 Content-Type: application/json
 
 {
-  "nombreCategoria": "Tickets",
+  "nombreCategoria": "Mandaditos",
   "descripcion": ".",
   "color": "#8c649c",
-  "icono": "fa fa-calculator",
+  "icono": "fa fa-motorcycle",
    "empresas":[ {
-                  "nombreEmpresa": "BAC Entradas",
+                  "nombreEmpresa": "Rapi-Auto",
                   "imagen": "img/rapidito.png",
                   "producto": [{
-                                "nombreProducto": "Olimpia vs Motagua",
-                                "descripcion": "Sol",
-                                "precio": 149
+                                "nombreProducto": "Encomienda",
+                                "descripcion": ".",
+                                "precio": 1149
                               },
                               {
-                                "nombreProducto": "Motagua vs Olimpia",
-                                "descripcion": "Palco",
-                                "precio": 349
+                                "nombreProducto": "Taxi",
+                                "descripcion": ".",
+                                "precio": 4449
                               }
                               
                               ]
          
                 },
                 {
-                  "nombreEmpresa": "Todo Ticket",
+                  "nombreEmpresa": "RapiMoto",
                   "imagen": "img/rapidito.png",
                   "producto": [{
-                                "nombreProducto": "Arcangel",
+                                "nombreProducto": "MotoMami",
                                 "descripcion": "Preferencial",
                                 "precio": 349
                               },
                               {
-                                "nombreProducto": "Ozuna",
-                                "descripcion": "VIP 1",
+                                "nombreProducto": "Motopapi",
+                                "descripcion": ".",
                                 "precio": 249
                               }
                               
